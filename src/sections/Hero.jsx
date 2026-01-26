@@ -40,7 +40,7 @@ const HeaderWrapper = styled.div`
   max-width: 1160px;
   margin: 0 auto;
   position: relative;
-  z-index: 1;
+  z-index: 100; /* Increased z-index to ensure header stays on top */
 `;
 
 const ContentWrapper = styled.div`
@@ -77,8 +77,9 @@ const MobileMedia = styled.img`
     height: auto;
     margin: 32px auto 32px auto;
     border-radius: 12px;
-    mix-blend-mode: color-dodge;
-    opacity: 1;
+    /* Fixed blend mode for better mobile compatibility */
+    mix-blend-mode: screen; /* Changed from color-dodge to screen for better mobile rendering */
+    opacity: 0.85;
   }
 `;
 
@@ -284,4 +285,3 @@ export default function Hero({
     </HeroSection>
   );
 }
-
