@@ -1,0 +1,340 @@
+/* ========================= Header Styles ========================= */
+
+.ea-header {
+  max-width: 1160px;
+  height: 68px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(91px);
+  border:rgba(255, 255, 255, 0.03) 1px solid;
+  border-radius: 20px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+}
+
+.ea-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 68px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 32px;
+}
+
+/* ========================= Logo ========================= */
+
+.ea-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: opacity 0.2s;
+  grid-column: 1;
+}
+
+.ea-logo:hover {
+  opacity: 0.8;
+}
+
+.ea-logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+.ea-mark {
+  display: flex;
+  align-items: center;
+}
+
+.ea-brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.ea-brand-top {
+  font-size: 16px;
+  color: #262626;
+}
+
+.ea-brand-bottom {
+  font-size: 14px;
+  color: #0ea5a4;
+  letter-spacing: 0.5px;
+}
+
+/* ========================= Desktop Nav ========================= */
+
+.ea-nav {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  grid-column: 2;
+}
+
+.ea-link {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.ea-link:hover {
+  color: #0ea5a4;
+}
+
+.ea-caret {
+  margin-left: 4px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* ========================= Actions ========================= */
+
+.ea-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  grid-column: 3;
+}
+
+.ea-cta {
+  display: inline-block;
+  padding: 8px 20px;
+  background: radial-gradient(90.73% 151.92% at 48.32% -51.92%, rgba(255, 255, 255, 0.1885) 0%, rgba(255, 255, 255, 0.0667) 100%);
+  box-shadow: 0px -5px 12.5px 3px rgba(255, 255, 255, 0.13) inset;
+  color:rgba(255, 255, 255, 1);
+  border-radius: 64px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.ea-cta:hover {
+  background: #0c8b8a;
+}
+
+.ea-cta-desktop {
+  display: none;
+}
+
+.ea-cta-mobile {
+  width: 100%;
+  text-align: center;
+  margin-top: 16px;
+}
+
+/* ========================= Mobile Hamburger ========================= */
+
+.ea-burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 28px;
+  height: 24px;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.ea-burger span {
+  width: 100%;
+  height: 3px;
+  background: #262626;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.ea-burger:hover span {
+  background: #0ea5a4;
+}
+
+/* ========================= Mobile Overlay & Drawer ========================= */
+
+.ea-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ea-overlay.is-open {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.ea-overlay-bg {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+.ea-drawer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 85%;
+  max-width: 360px;
+  background: #fff;
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.is-open .ea-drawer {
+  transform: translateX(0);
+}
+
+.ea-drawer-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.ea-drawer-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #262626;
+}
+
+.ea-close {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  color: #595959;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.ea-close:hover {
+  background: #f5f5f5;
+  color: #262626;
+}
+
+.ea-drawer-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 24px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========================= Accordion Sections ========================= */
+
+.ea-acc {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  font-weight: 600;
+  color: #262626;
+  text-align: left;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.ea-acc:hover {
+  color: #0ea5a4;
+}
+
+.ea-acc-caret {
+  font-size: 14px;
+  transition: transform 0.2s;
+}
+
+.ea-acc-caret.up {
+  transform: rotate(180deg);
+}
+
+.ea-sub {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 0 12px 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.ea-sub a {
+  padding: 8px 0;
+  color: #595959;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.ea-sub a:hover {
+  color: #0ea5a4;
+}
+
+.ea-drawer-link {
+  padding: 14px 0;
+  color: #262626;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 1px solid #f0f0f0;
+  transition: color 0.2s;
+}
+
+.ea-drawer-link:hover {
+  color: #0ea5a4;
+}
+
+/* ========================= Desktop Breakpoint ========================= */
+
+@media (min-width: 768px) {
+  .ea-nav {
+    display: flex;
+  }
+
+  .ea-cta-desktop {
+    display: inline-block;
+  }
+
+  .ea-burger {
+    display: none;
+  }
+
+  .ea-overlay {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ea-inner {
+    padding: 0 48px;
+  }
+}
