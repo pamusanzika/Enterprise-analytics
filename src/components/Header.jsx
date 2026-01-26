@@ -34,22 +34,22 @@ export default function Header() {
 
         {/* Desktop nav */}
         <nav className="ea-nav" aria-label="Primary">
-          <a className="ea-link" href="#">
+          <a className="ea-link" href="/industries">
             Industries 
           </a>
-          <a className="ea-link" href="#">
+          <a className="ea-link" href="/solutions">
             Solutions
           </a>
-          <a className="ea-link" href="#">
+          <a className="ea-link" href="/services">
             Services 
           </a>
-          <a className="ea-link" href="#">
+          <a className="ea-link" href="/about">
             About Us
           </a>
-          <a className="ea-link" href="#">
+          <a className="ea-link" href="/careers">
             Careers
           </a>
-          <a className="ea-link" href="#">
+          <a className="ea-link" href="/blog">
             Blogs
           </a>
         </nav>
@@ -109,9 +109,9 @@ export default function Header() {
             </button>
             {sections.industries && (
               <div className="ea-sub">
-                <a href="#">Hospitality</a>
-                <a href="#">Retail</a>
-                <a href="#">Finance</a>
+                <a href="/industries/hospitality">Hospitality</a>
+                <a href="/industries/retail">Retail</a>
+                <a href="/industries/finance">Finance</a>
               </div>
             )}
 
@@ -127,9 +127,9 @@ export default function Header() {
             </button>
             {sections.solutions && (
               <div className="ea-sub">
-                <a href="#">Business Intelligence</a>
-                <a href="#">Data Engineering</a>
-                <a href="#">Dashboards</a>
+                <a href="/solutions/business-intelligence">Business Intelligence</a>
+                <a href="/solutions/data-engineering">Data Engineering</a>
+                <a href="/solutions/dashboards">Dashboards</a>
               </div>
             )}
 
@@ -145,19 +145,19 @@ export default function Header() {
             </button>
             {sections.services && (
               <div className="ea-sub">
-                <a href="#">Consulting</a>
-                <a href="#">Implementation</a>
-                <a href="#">Support</a>
+                <a href="/services/consulting">Consulting</a>
+                <a href="/services/implementation">Implementation</a>
+                <a href="/services/support">Support</a>
               </div>
             )}
 
-            <a className="ea-drawer-link" href="#">
+            <a className="ea-drawer-link" href="/about">
               About Us
             </a>
-            <a className="ea-drawer-link" href="#">
+            <a className="ea-drawer-link" href="/careers">
               Careers
             </a>
-            <a className="ea-drawer-link" href="#">
+            <a className="ea-drawer-link" href="/blog">
               Blogs
             </a>
 
