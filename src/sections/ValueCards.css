@@ -1,0 +1,178 @@
+.value-cards-container {
+  padding: 36px 32px;
+}
+
+@media (max-width: 768px) {
+  .value-cards-container {
+    padding: 32px 16px;
+  }
+}
+
+.value-cards-max-width {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.value-cards-header {
+  max-width: 766px;
+  margin: 0 auto 60px;
+}
+
+.value-cards-title {
+  font-family: "SF Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 40px;
+  font-weight: 590;
+  line-height: 52px;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .value-cards-title {
+    font-size: 2.5rem;
+  }
+}
+
+.value-cards-subtitle {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: -1.1%;
+  color: #2e3134;
+}
+
+/* Row 1: Grid layout */
+.value-cards-top-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 1200px) {
+  .value-cards-top-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .value-cards-top-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Row 2: Flex layout */
+.value-cards-second-row {
+  display: flex;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+@media (max-width: 1200px) {
+  .value-cards-second-row {
+    flex-direction: column;
+  }
+}
+
+/* Base card styles */
+.value-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 32px 20px 18px 36px;
+  min-height: 371px;
+  border: 0.5px solid #00000014;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .value-card {
+    padding: 32px;
+    min-height: 280px;
+  }
+}
+
+/* BAU Card - ~59% of container */
+.value-card--bau {
+  flex: 1 1 58.7%;
+  max-width: 667px;
+  min-width: 0;
+  justify-content: flex-end;
+}
+
+@media (max-width: 1200px) {
+  .value-card--bau {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+/* Value Added Card - ~41% of container */
+.value-card--value-added {
+  flex: 1 1 41.3%;
+  max-width: 469px;
+  min-width: 0;
+  justify-content: flex-end;
+}
+
+@media (max-width: 1200px) {
+  .value-card--value-added {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+/* Card title base styles */
+.value-card-title {
+  font-family: "SF Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 22px;
+  font-weight: 590;
+  line-height: 30px;
+  letter-spacing: 0%;
+  position: relative;
+  margin: 0;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .value-card-title {
+    font-size: 1.5rem;
+  }
+}
+
+.value-card-title--white {
+  color: #ffffff;
+}
+
+.value-card-title--dark {
+  color: #2e3134;
+}
+
+/* Arrow icon */
+.value-card-arrow {
+  width: 72px;
+  height: 48px;
+  align-self: flex-end;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+/* Card content wrapper for bottom row cards */
+.value-card-content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.value-card-content--center {
+  align-items: center;
+}

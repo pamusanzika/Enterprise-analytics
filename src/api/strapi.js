@@ -1,23 +1,25 @@
 import axios from "axios";
 
 export const strapi = axios.create({
-  baseURL: process.env.REACT_APP_STRAPI_URL,
+  baseURL: process.env.REACT_APP_STRAPI_URL, // http://localhost:1337
 });
 
+// api/strapi.js
 export async function fetchHomePage() {
   const res = await strapi.get("/api/home-page", {
     params: {
       populate: {
-        Hero: { populate: "*" }, // your schema key is "Hero"
+        Hero: { populate: "*" },
+        featurestrip: {
+          populate: {
+            features: { populate: "*" }, // ✅ works (includes icon object with url)
+          },
+        },
+        cards: { populate: "*" },
       },
     },
   });
 
-  const data = res.data?.data;
-
-  // Strapi v5: fields live directly under `data`
-  if (data && !data.attributes) return data;
-
-  // Strapi v4: fields live under `data.attributes`
-  return data?.attributes;
+  return res.data?.data;
 }
+

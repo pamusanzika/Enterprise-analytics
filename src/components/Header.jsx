@@ -3,20 +3,12 @@ import "./header.css";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const [sections, setSections] = useState({
-    industries: false,
-    solutions: false,
-    services: false,
-  });
 
   // Lock body scroll when menu is open (mobile)
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => (document.body.style.overflow = "");
   }, [open]);
-
-  const toggleSection = (key) =>
-    setSections((s) => ({ ...s, [key]: !s[key] }));
 
   return (
     <header className="ea-header">
@@ -96,61 +88,15 @@ export default function Header() {
           </div>
 
           <div className="ea-drawer-body">
-            {/* Dropdown sections */}
-            <button
-              className="ea-acc"
-              onClick={() => toggleSection("industries")}
-              type="button"
-            >
-              <span>Industries</span>
-              <span className={`ea-acc-caret ${sections.industries ? "up" : ""}`}>
-                ▾
-              </span>
-            </button>
-            {sections.industries && (
-              <div className="ea-sub">
-                <a href="/industries/hospitality">Hospitality</a>
-                <a href="/industries/retail">Retail</a>
-                <a href="/industries/finance">Finance</a>
-              </div>
-            )}
-
-            <button
-              className="ea-acc"
-              onClick={() => toggleSection("solutions")}
-              type="button"
-            >
-              <span>Solutions</span>
-              <span className={`ea-acc-caret ${sections.solutions ? "up" : ""}`}>
-                ▾
-              </span>
-            </button>
-            {sections.solutions && (
-              <div className="ea-sub">
-                <a href="/solutions/business-intelligence">Business Intelligence</a>
-                <a href="/solutions/data-engineering">Data Engineering</a>
-                <a href="/solutions/dashboards">Dashboards</a>
-              </div>
-            )}
-
-            <button
-              className="ea-acc"
-              onClick={() => toggleSection("services")}
-              type="button"
-            >
-              <span>Services</span>
-              <span className={`ea-acc-caret ${sections.services ? "up" : ""}`}>
-                ▾
-              </span>
-            </button>
-            {sections.services && (
-              <div className="ea-sub">
-                <a href="/services/consulting">Consulting</a>
-                <a href="/services/implementation">Implementation</a>
-                <a href="/services/support">Support</a>
-              </div>
-            )}
-
+            <a className="ea-drawer-link" href="/industries">
+              Industries
+            </a>
+            <a className="ea-drawer-link" href="/solutions">
+              Solutions
+            </a>
+            <a className="ea-drawer-link" href="/services">
+              Services
+            </a>
             <a className="ea-drawer-link" href="/about">
               About Us
             </a>

@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap');
+
+.news-events-section {
+  padding: 72px 102px;
+}
+
+.news-events-container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.news-events-title {
+  font-family: "SF Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 40px;
+  font-weight: 590;
+  line-height: 52px;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  margin: 0 0 52px 0;
+  color: #1F2225;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 56px;
+  margin-bottom: 48px;
+}
+
+.news-card-wrapper {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.news-image-container {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  position: relative;
+}
+
+.news-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1);
+}
+
+.news-image.hovered {
+  transform: scale(1.08);
+}
+
+.news-card-content {
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.news-title-readmore-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  height: 142px;
+}
+
+.news-meta-container {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 0px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.news-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: #A7EAD2;
+  color: #062823;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 44px;
+  border: 1px solid #1FA98914;
+}
+
+.news-date-text {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #798087;
+}
+
+.news-card-title {
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: -0.01em;
+  color: #1F2225;
+  margin: 0;
+  flex: 1;
+}
+
+.news-read-more-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #122D25;
+  text-decoration: none;
+  transition: gap 0.3s ease;
+  white-space: nowrap;
+}
+
+.news-read-more-link.hovered {
+  gap: 12px;
+}
+
+.news-read-more-link:hover {
+  color: #0d5028;
+}
+
+.news-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.news-explore-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 52px;
+  gap: 8px;
+  padding: 12px 20px 12px 24px;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #122922;
+  background-color: transparent;
+  border: 1.5px solid #234C40;
+  border-radius: 54px;
+  opacity: 1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: Inter, sans-serif;
+}
+
+.news-explore-button:hover {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(52, 135, 31, 0.15);
+}
+
+.news-arrow-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.news-explore-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .news-events-section {
+    padding: 60px 20px;
+  }
+
+  .news-events-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .news-image-container {
+    height: 200px;
+  }
+
+  .news-card-content {
+    padding: 16px 0;
+    gap: 16px;
+  }
+
+  .news-title-readmore-container {
+    height: auto;
+    gap: 16px;
+  }
+
+  .news-card-title {
+    font-size: 16px;
+  }
+
+  .news-read-more-link {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .news-button-container {
+    width: 100%;
+  }
+
+  .news-explore-button {
+    width: 100%;
+    padding: 14px 32px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+}
