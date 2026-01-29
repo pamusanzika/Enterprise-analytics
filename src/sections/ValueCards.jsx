@@ -26,7 +26,7 @@ export default function IFSServices() {
               <br />
               Implementations
             </h2>
-            <img className="value-card-arrow" src="/card-arrow.svg" alt="arrow" />
+              <img className="value-card-arrow" src="/card-arrow.svg" alt="arrow" loading="lazy" />
           </div>
 
           <div className="value-card value-card--upgrade" style={{ backgroundImage: "url('/upgradecloud.svg')" }}>
@@ -35,7 +35,7 @@ export default function IFSServices() {
               <br />
               IFS Cloud
             </h2>
-            <img className="value-card-arrow" src="/card-arrow.svg" alt="arrow" />
+              <img className="value-card-arrow" src="/card-arrow.svg" alt="arrow" loading="lazy" />
           </div>
 
           <div className="value-card value-card--ams" style={{ backgroundImage: "url('/Ams.svg')" }}>
@@ -44,7 +44,7 @@ export default function IFSServices() {
               <br />
               Services (AMS)
             </h2>
-            <img className="value-card-arrow" src="/card-arrow.svg" alt="arrow" />
+              <img className="value-card-arrow" src="/card-arrow.svg" alt="arrow" loading="lazy" />
           </div>
         </div>
 
@@ -57,14 +57,14 @@ export default function IFSServices() {
                 <br />
                 (BAU) Support
               </h2>
-              <img className="value-card-arrow" src="/4arrow.svg" alt="arrow" />
+                <img className="value-card-arrow" src="/4arrow.svg" alt="arrow" loading="lazy" />
             </div>
           </div>
 
           <div className="value-card value-card--value-added" style={{ backgroundImage: "url('/valueadded.svg')" }}>
             <div className="value-card-content value-card-content--center">
               <h2 className="value-card-title value-card-title--dark">Value added services</h2>
-              <img className="value-card-arrow" src="/5arrow.svg" alt="arrow" />
+                <img className="value-card-arrow" src="/5arrow.svg" alt="arrow" loading="lazy" />
             </div>
           </div>
         </div>

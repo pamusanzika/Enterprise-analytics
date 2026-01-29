@@ -17,6 +17,7 @@ function NewsCard({ item, index }) {
           className={`news-image ${isHovered ? 'hovered' : ''}`}
           src={item.image}
           alt={item.title}
+          loading="lazy"
         />
       </div>
 
@@ -81,7 +82,7 @@ export default function NewsEvents() {
         <div className="news-button-container">
           <button className="news-explore-button">
             Explore More
-            <img src="/exploreicon.svg" alt="arrow" className="news-explore-icon" />
+            <img src="/exploreicon.svg" alt="arrow" className="news-explore-icon" loading="lazy" />
           </button>
         </div>
       </div>

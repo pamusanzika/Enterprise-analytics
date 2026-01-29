@@ -50,7 +50,7 @@ export default function Hero({
             <div className="cta-wrapper">
               <a className="cta-button" href={link || "#"}>
                 {buttontext}
-                <img className="arrow-icon" src="/arrow-icon.svg" alt="arrow" />
+                <img className="arrow-icon" src="/arrow-icon.svg" alt="arrow" loading="lazy" />
               </a>
             </div>
           )}

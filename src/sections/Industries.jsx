@@ -54,6 +54,7 @@ export default function Industries({ cards = [] }) {
                       src={imgSrc} 
                       alt={card.title || "Industry"} 
                       className="industries-img"
+                      loading="lazy"
                     />
                   ) : (
                     <div className="industries-placeholder" />

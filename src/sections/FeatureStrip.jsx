@@ -30,7 +30,7 @@ export default function IFSCloudLanding({ title, description, buttontext, featur
             </p>
             {/* Mobile image - shown only on mobile */}
             <div className="feature-strip-mobile-image">
-              <img src="/mobile.svg" alt="Feature illustration" />
+              <img src="/mobile.svg" alt="Feature illustration" loading="lazy" />
             </div>
           </div>
 
@@ -77,7 +77,7 @@ export default function IFSCloudLanding({ title, description, buttontext, featur
           <div>
             <button className="feature-strip-cta-button">
               {buttontext || 'Learn More'}
-              <img src="/Frame (3).svg" alt="arrow" />
+              <img src="/Frame (3).svg" alt="arrow" loading="lazy" />
             </button>
           </div>
         </div>

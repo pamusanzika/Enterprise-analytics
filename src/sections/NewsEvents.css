@@ -37,6 +37,7 @@
   height: 240px;
   overflow: hidden;
   position: relative;
+  border-radius: 8px; /* Added border-radius here */
 }
 
 .news-image {
@@ -179,11 +180,12 @@
 /* Responsive Styles */
 @media (max-width: 768px) {
   .news-events-section {
-    padding: 60px 20px;
+   padding: 16px 20px 40px 20px;
   }
 
   .news-events-title {
-    font-size: 36px;
+    font-size: 40px;
+    line-height: 52px;
     margin-bottom: 40px;
   }
 
@@ -208,12 +210,13 @@
   }
 
   .news-card-title {
-    font-size: 16px;
+    font-size: 20px;
+    line-height: 30px;
   }
 
   .news-read-more-link {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 28px;
   }
 
   .news-button-container {

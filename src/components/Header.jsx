@@ -19,6 +19,7 @@ export default function Header() {
             src="/logo.svg" 
             alt="Enterprise Analytics" 
             className="ea-logo-img"
+            loading="lazy"
             width="140"
             height="40"
           />

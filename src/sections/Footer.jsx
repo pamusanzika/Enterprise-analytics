@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="footer-column">
             <div className="logo-section">
               <div className="logo-icon">
-                <img src="/FT-logo.svg" alt="Enterprise Analytics Logo" />
+                <img src="/FT-logo.svg" alt="Enterprise Analytics Logo" loading="lazy" />
               </div>
             </div>
           </div>
@@ -88,13 +88,13 @@ const Footer = () => {
           {/* Badges */}
           <div className="badges-container">
             <div className="partner-logo">
-              <img src="/partners.svg" alt="Partner Logo" />
+              <img src="/partners.svg" alt="Partner Logo" loading="lazy" />
             </div>
             <div className="partner-logo">
-              <img src="/image 22.svg" alt="Partner Logo" />
+              <img src="/image 22.svg" alt="Partner Logo" loading="lazy" />
             </div>
             <div className="partner-logo">
-              <img src="/image 23.svg" alt="Partner Logo" />
+              <img src="/image 23.svg" alt="Partner Logo" loading="lazy" />
             </div>
           </div>
         </div>

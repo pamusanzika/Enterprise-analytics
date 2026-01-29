@@ -60,6 +60,10 @@
   gap: 32px;
 }
 
+.feature-strip-benefits-row > div {
+  position: relative;
+}
+
 .feature-strip-benefit-icon-wrapper {
   margin-bottom: 16px;
 }
@@ -108,8 +112,10 @@
   transition: background-color 0.3s;
 }
 
-.feature-strip-cta-button:hover {
-  background: #e5e7eb;
+.feature-strip-cta-button:hover  {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(52, 135, 31, 0.15);
 }
 
 .feature-strip-cta-button img {
@@ -126,7 +132,7 @@
 @media (max-width: 768px) {
   .feature-strip-container {
     background-image: none !important;
-    padding: 48px 20px;
+    padding: 32px 20px;
   }
 
   .feature-strip-grid {
@@ -138,21 +144,21 @@
   }
 
   .feature-strip-title {
-    font-size: 28px;
+    font-size: 26px;
     line-height: 36px;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
   }
 
   .feature-strip-subtitle {
     font-size: 16px;
-    line-height: 26px;
-    margin-bottom: 32px;
+    line-height: 24px;
+    margin-bottom: 24px;
   }
 
   .feature-strip-mobile-image {
     display: block;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   .feature-strip-mobile-image img {
@@ -161,13 +167,30 @@
   }
 
   .feature-strip-benefits-row {
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+
+  .feature-strip-benefits-row > div {
+    padding: 16px 12px;
+  }
+
+  .feature-strip-benefits-row > div:not(:last-child) {
+    border-right: 1px solid #D1D5DB;
   }
 
   .feature-strip-benefit-title {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .feature-strip-benefit-icon-wrapper {
+    margin-bottom: 12px;
+  }
+
+  .feature-strip-benefit-icon-wrapper img {
+    width: 40px;
+    height: 40px;
   }
 
   .feature-strip-cta-button {
@@ -192,7 +215,21 @@
   }
 
   .feature-strip-benefits-row {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+
+  .feature-strip-benefits-row > div {
+    padding: 12px 8px;
+  }
+
+  .feature-strip-benefit-title {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .feature-strip-benefit-icon-wrapper img {
+    width: 32px;
+    height: 32px;
   }
 }

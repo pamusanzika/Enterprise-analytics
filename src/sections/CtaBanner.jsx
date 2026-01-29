@@ -3,9 +3,10 @@ import './CtaBanner.css';
 
 export default function ERPBanner() {
   return (
-    <div className="cta-container">
+   <div className="cta-container">
+      <div className="cta-overlay-image" style={{ backgroundImage: "url('/Cta-bg.svg')" }} />
+      
       <div className="cta-top-section">
-        <div className="cta-overlay-image" style={{ backgroundImage: "url('/Cta-bg.svg')" }} />
         <h2 className="cta-title">
           Let's Power Your ERP<br />
           Transformation
@@ -18,7 +19,7 @@ export default function ERPBanner() {
       <div className="cta-bottom-section">
         <div className="cta-card">
           <div className="cta-icon-box">
-            <img src="/headset.svg" alt="Headset" />
+            <img src="/headset.svg" alt="Headset" loading="lazy" />
           </div>
           <div className="cta-card-content">
             <h3 className="cta-card-title">
@@ -26,14 +27,14 @@ export default function ERPBanner() {
               for Your Needs
             </h3>
             <p className="cta-card-link">
-              Speak with an expert <img src="/green-arrow.svg" alt="arrow" />
+              Speak with an expert <img src="/green-arrow.svg" alt="arrow" loading="lazy" />
             </p>
           </div>
         </div>
 
         <div className="cta-card">
           <div className="cta-icon-box">
-            <img src="/people.svg" alt="People" />
+            <img src="/people.svg" alt="People" loading="lazy" />
           </div>
           <div className="cta-card-content">
             <h3 className="cta-card-title">
@@ -41,7 +42,7 @@ export default function ERPBanner() {
               shaping ERP transformation
             </h3>
             <p className="cta-card-link">
-              Join our team <img src="/green-arrow.svg" alt="arrow" />
+              Join our team <img src="/green-arrow.svg" alt="arrow" loading="lazy" />
             </p>
           </div>
         </div>
